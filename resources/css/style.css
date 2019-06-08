@@ -1,0 +1,225 @@
+@media only screen and (max-width: 599.99px) {
+  #navDesktop { display: none; }
+  #desTitulo { display: none; }
+  #navMobile {
+    height: 50px;
+    box-shadow: 10px 10px 5px #dcdce0;
+    background-color: rgb(22,44,155);
+    color: white;
+
+  }
+  #reiDoGado {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .iconTitulo {
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
+
+  .menu-icon{
+    font-size: 2rem;
+    margin-top: 8px;
+  }
+
+  .titulo {
+      margin-top: 6px;
+      font-size: 1.5rem;
+  }
+
+  .logo {
+    width: 10px;
+  }
+
+
+
+  .mobInput {
+    margin-top: 40px;
+    box-shadow: 10px 10px 5px #dcdce0;
+  }
+
+  .botao {
+    margin-top: 20px;
+    padding: 18px;
+  }
+
+  .bodyTable {
+    margin: 0 auto;
+    box-shadow: 10px 10px 5px #dcdce0;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .icon-tabela {
+    font-size: 20px;
+    text-align: center;
+
+
+  }
+
+  .icon-editar {
+
+  }
+
+
+  .icon-excluir {
+    color: red;
+  }
+
+  .subTitulo {
+    text-align: center;
+    box-shadow: 2px 2px 1px #dcdce0;
+    border: 0.02px solid #dcdce0;
+    margin-bottom: 10px;
+  }
+
+}
+
+
+@media only screen and (min-width: 600px) {
+  #navMobile {
+    display: none;
+  }
+  #navDesktop {
+    display: flex;
+    box-shadow: 10px 10px 5px #dcdce0;
+    width: 70px;
+    flex-direction: column;
+    background-color: rgb(22,44,155);
+    color: white;
+    padding-bottom: 20px;
+    float: left;
+
+  }
+
+  #desTitulo {
+    box-shadow: 10px 10px 5px #dcdce0;
+    padding: 10px;
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+    background-color: rgb(33, 118, 217);
+    margin-bottom: 50px;
+  }
+
+  #reiDoGado {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+
+  .titulo {
+    text-align: center;
+  }
+
+
+
+  .logo {
+    margin-left: 10px;
+    margin-top: 6px;
+  }
+
+  .fas {
+    font-size: 20px;
+  }
+
+  .iconTitulo {
+    margin-left: 10px;
+    font-size: 50px;
+  }
+
+  .icone-circular {
+    margin-left: 16px;
+    text-align: center;
+    padding-top: 7px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-top: 16px;
+    background-color: rgb(33,118,217);
+  }
+
+  .icone-circular:hover {
+    background-color: white;
+    color: rgb(33,118,217);
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.3s;
+    transition-duration: 0.8s;
+  }
+
+
+  .icon-tabela {
+    font-size: 20px;
+    text-align: center;
+
+
+  }
+
+  .icon-editar {
+
+  }
+
+
+  .icon-excluir {
+    color: red;
+  }
+
+
+
+
+  .conInput {
+    box-shadow: 10px 10px 5px #dcdce0;
+    padding: 10px;
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+    background-color: rgb(33, 118, 217);
+    height: 100%;
+  }
+  .row {
+    margin-bottom: 10px;
+  }
+  .botao {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    float: right;
+    width: 100%;
+
+  }
+
+  .bodyTable {
+      margin: 0 auto;
+      box-shadow: 10px 10px 5px #dcdce0;
+      width: 70%;
+      margin-top: 50px;
+  }
+
+  #table {
+      margin-top: 50px;
+      margin-bottom: 10px;
+  }
+
+  .subTitulo {
+    padding: 5px;
+    text-align: center;
+    box-shadow: 2px 2px 1px #dcdce0;
+    border: 0.02px solid #dcdce0;
+    margin-bottom: 30px;
+  }
+
+}
+
+
+
+
+.conChart {
+  box-shadow: 10px 10px 5px #dcdce0;
+  padding: 10px;
+  width: 70%;
+  margin: 0 auto;
+}

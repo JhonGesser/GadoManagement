@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="./resources/css/style.css">
+    <link rel="stylesheet" href="./resources/font/fontawesome/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="./resources/js/script.js"></script>
+
+
+  </head>
+  <body>
+    <header>
+      <nav id="navDesktop" class="">
+          <div class="logo">
+            <img id="reiDoGado"src="./resources/image/rei_do_gado.png" alt="Rei do gado">
+          </div>
+          <div class="icone-circular">
+              <i class="fas fa-cart-plus icone">
+
+              </i>
+          </div>
+          <div class="icone-circular">
+              <i class="fas fa-chart-line">
+                  <a href="./graficoConsumo.html"></a>
+              </i>
+          </div>
+          <div class="icone-circular">
+              <i class="fas fa-calendar-check"></i>
+          </div>
+          <div class="icone-circular">
+              <i class="fas fa-hourglass-half"></i>
+          </div>
+          <div class="icone-circular">
+              <i class="fas fa-search-dollar"></i>
+          </div>
+          <div class="icone-circular">
+              <i class="fas fa-dollar-sign"></i>
+          </div>
+          <div class="icone-circular">
+
+          </div>
+          <div class="icone-circular">
+
+          </div>
+          <div class="icone-circular">
+
+          </div>
+          <div class="icone-circular">
+
+          </div>
+          <div class="icone-circular">
+
+          </div>
+      </nav>
+      <nav id="navMobile" class="">
+          <div class="container">
+            <div class="row">
+              <div class="logo col-1 ">
+                  <img id="reiDoGado"src="./resources/image/rei_do_gado.png" alt="Rei do gado">
+              </div>
+              <div class="offset-2 col-1">
+                <i class="iconTitulo fas fa-chart-line"></i>
+              </div>
+              <div class="col-5">
+                  <h1 class="titulo">Titulo de teste</h1>
+              </div>
+              <div class="offset-2 col-1">
+                <i class="fas fa-align-justify menu-icon"></i>
+              </div>
+          </div>
+      </nav>
+    </header>
+    <main>
+      <div id="desTitulo" class="container">
+        <div class="row">
+          <div class="col-1">
+            <i class="iconTitulo fas fa-chart-line"></i>
+          </div>
+          <div class="col-11 titulo">
+              <h1>Titulo de teste</h1>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="conInput">
+        <div class="container mobInput">
+            <div class="row">
+              <div class="input-group col-2 col-sm-3">
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon2">ID</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Id" aria-label="ID" aria-describedby="basic-addon2">
+              </div>
+              <div class="input-group col-10 col-sm-9">
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon2">Campo qualquer</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Informe um valor qualquer">
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="input-group col-2 col-sm-3">
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon2">ID</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Id" aria-label="ID" aria-describedby="basic-addon2">
+              </div>
+              <div class="input-group col-10 col-sm-9">
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon2">Campo qualquer</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Informe um valor qualquer">
+              </div>
+            </div>
+            <div class="row botao">
+              <div class="offset-8">
+
+              </div>
+
+              <div class="col-2">
+                <button type="submit" class="btn btn-danger" onclick="confirmarExclusao()">Deletar</button>
+              </div>
+              <div class="col-2">
+                <button type="submit" class="btn btn-success" onclick="sucesso()">Gravar</button>
+              </div>
+
+            </div>
+          </div>
+      </div>
+      <div class="bodyTable">
+        <table id="tabela" class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Descrição</th>
+              <th>Data</th>
+              <th>Informacao adicional</th>
+              <th>Opção</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>ASdasd asd </td>
+              <td>21/05/2000</td>
+              <td>asdarasd</td>
+              <td>
+                <div class="icon-tabela">
+                  <i class="fas fa-pencil-alt icon-editar"></i>
+                  <i class="fas fa-times-circle icon-excluir"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>ASdasd asd </td>
+              <td>21/05/2000</td>
+              <td>asdarasd</td>
+              <td>
+                <div class="icon-tabela">
+                  <i class="fas fa-pencil-alt icon-editar"></i>
+                  <i class="fas fa-times-circle icon-excluir"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>ASdasd asd </td>
+              <td>21/05/2000</td>
+              <td>asdarasd</td>
+              <td>
+                <div class="icon-tabela">
+                  <i class="fas fa-pencil-alt icon-editar"></i>
+                  <i class="fas fa-times-circle icon-excluir"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>ASdasd asd </td>
+              <td>21/05/2000</td>
+              <td>asdarasd</td>
+              <td>
+                <div class="icon-tabela">
+                  <i class="fas fa-pencil-alt icon-editar"></i>
+                  <i class="fas fa-times-circle icon-excluir"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>ASdasd asd </td>
+              <td>21/05/2000</td>
+              <td>asdarasd</td>
+              <td>
+                <div class="icon-tabela">
+                  <i class="fas fa-pencil-alt icon-editar"></i>
+                  <i class="fas fa-times-circle icon-excluir"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>ASdasd asd </td>
+              <td>21/05/2000</td>
+              <td>asdarasd</td>
+              <td>
+                <div class="icon-tabela">
+                  <i class="fas fa-pencil-alt icon-editar"></i>
+                  <i class="fas fa-times-circle icon-excluir"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>ASdasd asd </td>
+              <td>21/05/2000</td>
+              <td>asdarasd</td>
+              <td>
+                <div class="icon-tabela">
+                  <i class="fas fa-pencil-alt icon-editar"></i>
+                  <i class="fas fa-times-circle icon-excluir"></i>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>

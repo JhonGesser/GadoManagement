@@ -1,0 +1,76 @@
+
+@media only screen and (max-width: 599.99px) {
+  #grafico {
+    margin-top: 5px;
+    margin: 0 auto;
+    width: 100%;
+    height: 200px;
+  }
+  .subTitulo {
+    text-align: center;
+    font-size: 15px;
+  }
+  #info-coluna-um {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(215,2,6);
+    border: 1px solid grey;
+
+  }
+
+  #info-coluna-dois {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(240,91,79);
+    border: 1px solid grey;
+  }
+
+  .label-info {
+    font-size: 15px;
+  }
+
+  .conteudo-grafico {
+    padding: 5px;
+  }
+
+
+}
+
+@media only screen and (min-width: 600px) {
+  #grafico {
+    margin-top: 10px;
+    margin: 0 auto;
+    width: 50%;
+    height: 300px;
+  }
+
+
+  #info-coluna-um {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(215,2,6);
+    border: 1px solid grey;
+
+  }
+
+  #info-coluna-dois {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(240,91,79);
+    border: 1px solid grey;
+  }
+  .container {
+    width: 50%;
+  }
+
+  .conteudo-grafico {
+    padding: 15px;
+  }
+
+
+}
+
+.info {
+  float: left;
+  width: 50%;
+}
