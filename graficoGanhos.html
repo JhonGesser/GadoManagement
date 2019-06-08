@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Gráfico animal na fazenda</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+     <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" href="./resources/css/graficoGanhos.css">
+     <link rel="stylesheet" href="./resources/css/style.css">
+  </head>
+  <body>
+    <div class="conChart">
+        <h1 class="subTitulo">
+          <span class="headline">Ganhos e perdas por semestre</span>
+        </h1>
+        <div class="conteudo-grafico">
+            <div id="chart1" class="grafico ct-chart ct-perfect-fourth"></div>
+            <div class="container">
+              <div class="row">
+                <div class="col-1">
+                  <div id="linegraf-info-dois"></div>
+                </div>
+                <h5 class="label-info col">Ganhos</h5>
+                <div class="col-1">
+                  <div id="linegraf-info-um"></div>
+                </div>
+                <h5 class="label-info col">Despesas</h5>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./resources/js/graficoGanhos.js"></script>
+  </body>
+</html>
