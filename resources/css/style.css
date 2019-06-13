@@ -223,3 +223,16 @@
   width: 70%;
   margin: 0 auto;
 }
+
+.pooper{
+  margin-top: 1px;
+  width: 12%;
+  height: 25px;
+  background-color: #26A7FF;
+  border: 1px #000 dotted;
+  text-align: right;
+  color: #FFF;
+  font-size: 17px;
+  -webkit-text-stroke-width: 0.2px; /* largura da borda */
+  -webkit-text-stroke-color: #000; /* cor da borda */
+}
