@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <link rel="stylesheet" href="./resources/css/style.css">
+  <link rel="stylesheet" href="./resources/font/fontawesome/css/all.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="./resources/js/script.js"></script>
+  <link rel="icon" href="./resources/favicon.ico" type="image/x-icon" />
+  <script src="./resources/js/redirecionamento.js"></script>
+  <script src="https://unpkg.com/tooltip.js"></script> 
+  <script src="https://unpkg.com/popper.js"></script>
+  <script src="./resources/js/scriptPopper.js"></script>
+</head>
+
+<body>
+  <header>
+    <div id="popper1" class="pooper"><span>Produtos</span></div>
+      <div id="popper2" class="pooper"><span>Despezas</span></div>
+      <div id="popper3" class="pooper"><span>Estoque</span></div>
+      <div id="popper4" class="pooper"><span>Animal</span></div>
+      <div id="popper5" class="pooper"><span>Dados</span></div>
+      <div id="popper6" class="pooper"><span>Abatedouro</span></div>
+      <div id="popper7" class="pooper"><span>Atividades realizadas</span></div>
+      <div id="popper8" class="pooper"><span>Lucros/Custos</span></div>
+      <div id="popper9" class="pooper"><span>Time Line</span></div>
+    <nav id="navDesktop" class="">
+      <div onclick="redirecionaInicio()">
+        <div class="logo">
+          <img id="reiDoGado" src="./resources/image/rei_do_gado.png" alt="Rei do gado">
+        </div>
+      </div>
+      <div id="menu1" onclick="redirecionaCadastroProdutos()" >
+        <div class="icone-circular">
+          <i class="fas fa-cart-plus icone">
+
+          </i>
+        </div>
+      </div>
+      <div id="menu2" onclick="redirecionaDespezasAnimal()" >
+        <div class="icone-circular">
+          <i class="fas fa-chart-line"></i>
+          </i>
+        </div>
+      </div>
+      <div id="menu3" onclick="redirecionaGraficoEstoque()" >
+        <div class="icone-circular">
+          <i class="fas fa-calendar-check"></i>
+        </div>
+      </div>
+      <div id="menu4" onclick="redirecionaCadastroAnimal()" >
+        <div class="icone-circular">
+          <i class="fas fa-hourglass-half"></i>
+        </div>
+      </div>
+      <div id="menu5" onclick="redirecionaGraficoDadosAnimal()" >
+        <div class="icone-circular">
+          <i class="fas fa-search-dollar"></i>
+        </div>
+      </div>
+      <div id="menu6" onclick="redirecionaAbatedouro()" >
+        <div class="icone-circular">
+          <i class="fas fa-dollar-sign"></i>
+        </div>
+      </div>
+      <div id="menu7" onclick="redirecionaAtividadesRealizadaAnimal()" >
+        <div class="icone-circular">
+
+        </div>
+      </div>
+      <div  id="menu8" onclick="redirecionaGraficoLucros()" >
+        <div class="icone-circular">
+
+        </div>
+      </div>
+      <div id="menu9" onclick="redirecionaTimeLine()" >
+        <div class="icone-circular">
+
+        </div>
+      </div>
+      </div>
+    </nav>
+    <nav id="navMobile" class="">
+      <div class="container">
+        <div class="row">
+          <div class="logo col-1 ">
+            <img id="reiDoGado" src="./resources/image/rei_do_gado.png" alt="Rei do gado">
+          </div>
+          <div class="offset-2 col-1">
+            <i class="iconTitulo fas fa-chart-line"></i>
+          </div>
+          <div class="col-5">
+            <h1 class="titulo">Cadastro de boi</h1>
+          </div>
+          <div class="offset-2 col-1">
+            <i class="fas fa-align-justify menu-icon"></i>
+          </div>
+        </div>
+    </nav>
+  </header>
+  <main>
+    <div id="desTitulo" class="container">
+      <div class="row">
+        <div class="col-1">
+          <i class="iconTitulo fas fa-chart-line"></i>
+        </div>
+        <div class="col-11 titulo">
+          <h1>Cadastro do boi</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="conInput">
+      <div class="container mobInput">
+        <div class="row">
+          <div class="input-group col-2 col-sm-3">
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon2">ID</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Id" aria-label="ID" aria-describedby="basic-addon2">
+          </div>
+          <div class="input-group col-7 col-sm-6">
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon2">Código</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Informe o código do boi">
+          </div>
+          <div class="btn-group col-2 col-sm-3">
+            <button type="button" class="btn btn-info">Rebanho</button>
+            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Rebanho A</a>
+              <a class="dropdown-item" href="#">Rebanho B</a>
+              <a class="dropdown-item" href="#">Rebanho C</a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-group col-4 col-sm-4">
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon2">Peso antes da morte</span>
+            </div>
+            <input type="number" class="form-control" disabled>
+          </div>
+
+          <div class="btn-group col-3 col-sm-8">
+            <button type="button" class="btn btn-info">Raça</button>
+            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Devon</a>
+              <a class="dropdown-item" href="#">Devon</a>
+              <a class="dropdown-item" href="#">Devon</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="input-group col-6 col-sm-4">
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon2">Data de nascimento</span>
+            </div>
+            <input type="date" class="form-control">
+          </div>
+
+          <div class="input-group col-6 col-sm-5">
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon2" disabled>Data de entrada na fazenda</span>
+            </div>
+            <input type="date" class="form-control">
+          </div>
+          <div class="input-group col-4 col-sm-3">
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon2">Peso antes da morte</span>
+            </div>
+            <input type="number" class="form-control" disabled>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="input-group col-7 col-sm-5">
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon2">Data do abate</span>
+            </div>
+            <input type="date" class="form-control" disabled>
+          </div>
+          <div class="input-group col-7 col-sm-5">
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon2">Valor ganho</span>
+            </div>
+            <input type="number" class="form-control" disabled>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <button type="submit" class="btn btn-danger" onclick="confirmarExclusao()">Deletar</button>
+          </div>
+          <div class="col-2">
+            <button type="submit" class="btn btn-success" onclick="sucesso()">Gravar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bodyTable">
+      <table id="tabela" class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Descrição</th>
+            <th>Data</th>
+            <th>Informacao adicional</th>
+            <th>Opção</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Boi 1</td>
+            <td>22/06/2000</td>
+            <td>Boizão</td>
+            <td>
+              <div class="icon-tabela">
+                <i class="fas fa-pencil-alt icon-editar"></i>
+                <i class="fas fa-times-circle icon-excluir"></i>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Boi 2</td>
+            <td>27/05/2000</td>
+            <td>Boizão</td>
+            <td>
+              <div class="icon-tabela">
+                <i class="fas fa-pencil-alt icon-editar"></i>
+                <i class="fas fa-times-circle icon-excluir"></i>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Boi 3</td>
+            <td>21/05/2000</td>
+            <td>Boizão</td>
+            <td>
+              <div class="icon-tabela">
+                <i class="fas fa-pencil-alt icon-editar"></i>
+                <i class="fas fa-times-circle icon-excluir"></i>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Boi 4</td>
+            <td>21/05/2000</td>
+            <td>Boizão</td>
+            <td>
+              <div class="icon-tabela">
+                <i class="fas fa-pencil-alt icon-editar"></i>
+                <i class="fas fa-times-circle icon-excluir"></i>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Boi Jorge</td>
+            <td>25/07/2010</td>
+            <td>Boizão</td>
+            <td>
+              <div class="icon-tabela">
+                <i class="fas fa-pencil-alt icon-editar"></i>
+                <i class="fas fa-times-circle icon-excluir"></i>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+
+</html>
