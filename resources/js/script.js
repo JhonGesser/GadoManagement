@@ -1,8 +1,19 @@
-
-
-
-
-
+function exibeHint(elemento) {
+    let id = String(elemento.getAttribute("id"));
+    let popper = $('#popper' + id[id.length -1]);
+    $( popper ).removeClass( "esconde" );
+    $( popper ).removeClass( "transicaoHintBarEsconder" );
+    $( popper ).addClass( "transicaoHintBarExibir" );
+}
+function escondeHint(elemento) {
+  let id = String(elemento.getAttribute("id"));
+  let popper = $('#popper' + id[id.length -1]);
+  $( popper ).removeClass( "transicaoHintBarExibir" );
+  $( popper ).addClass('transicaoHintBarEsconder');
+  setTimeout(function(){
+        $( popper ).addClass( "esconde" );
+    }, 1000);
+}
 
 function sucesso() {
   Swal.fire({
