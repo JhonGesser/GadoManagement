@@ -31,7 +31,7 @@ function redirecionaGraficoLucros(){
     window.location.href = "./graficoLucros.html";
 }
 function redirecionaTimeLine(){
-    window.location.href = "./timeLine.html";
+    window.location.href = "./aroba.html";
 }
 function redirecionaInicio(){
     window.location.href = "./index.html";
