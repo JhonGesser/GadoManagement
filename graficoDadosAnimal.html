@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Gráfico animal na fazenda</title>
+    <link rel="stylesheet" href="./resources/font/fontawesome/css/all.css">
+    <script src="./resources/js/script.js"></script>
+    <link rel="icon" href="./resources/favicon.ico" type="image/x-icon" />
+    <script src="./resources/js/redirecionamento.js"></script>
+    <script src="https://unpkg.com/tooltip.js"></script>
+    <script src="https://unpkg.com/popper.js"></script>
+    <script src="./resources/js/scriptPopper.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+     <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" href="./resources/css/graficoAnimalFazenda.css">
+     <link rel="stylesheet" href="./resources/css/style.css">
+
+  </head>
+  <body>
+    <header>
+        <div id="popper1" class="pooper esconde arrow_box">Cadastrado do produtos</div>
+        <div id="popper2" class="pooper esconde arrow_box">Cadastro de despezas</div>
+        <div id="popper3" class="pooper esconde arrow_box">Gráfico do estoque</div>
+        <div id="popper4" class="pooper esconde arrow_box">Cadastro de animais</div>
+        <div id="popper5" class="pooper esconde arrow_box">Gráficos dados do animal</div>
+        <div id="popper6" class="pooper esconde arrow_box">Cadastro de abate</div>
+        <div id="popper7" class="pooper esconde arrow_box">Cadastro atividade realizada</div>
+        <div id="popper8" class="pooper esconde arrow_box">Gráfico dos Lucros/Custos</div>
+        <div id="popper9" class="pooper esconde arrow_box">Gráfico do aroba por periodo</div>
+      <nav id="navDesktop" class="">
+        <div onclick="redirecionaInicio()">
+          <div class="logo">
+            <img id="reiDoGado" src="./resources/image/rei_do_gado.png" alt="Rei do gado">
+          </div>
+        </div>
+        <div id="menuPopper1">
+          <div id="menu1" class="icone-circular" onmouseenter="exibeHint(this)" onmouseleave ="escondeHint(this)" onclick="redirecionaCadastroProdutos()">
+            <i class="fas fa-cart-plus icone"></i>
+          </div>
+        </div>
+        <div id="menuPopper2">
+          <div class="icone-circular" id="menu2" onclick="redirecionaDespezasAnimal()" onmouseenter="exibeHint(this)" onmouseleave ="escondeHint(this)">
+            <i class="fas fa-chart-line"></i>
+            </i>
+          </div>
+        </div>
+        <div id="menuPopper3">
+          <div class="icone-circular" id="menu3" onclick="redirecionaGraficoEstoque()" onmouseenter="exibeHint(this)" onmouseleave ="escondeHint(this)">
+            <i class="fas fa-dolly"></i>
+          </div>
+        </div>
+        <div id="menuPopper4">
+          <div class="icone-circular" id="menu4" onclick="redirecionaCadastroAnimal()" onmouseenter="exibeHint(this)" onmouseleave ="escondeHint(this)">
+            <i class="fas fa-paw"></i>
+          </div>
+        </div>
+        <div id="menuPopper5">
+          <div class="icone-circular" id="menu5" onclick="redirecionaGraficoDadosAnimal()" onmouseenter="exibeHint(this)" onmouseleave ="escondeHint(this)">
+            <i class="fas fa-chart-pie"></i>
+          </div>
+        </div>
+        <div id="menuPopper6">
+          <div class="icone-circular" id="menu6" onclick="redirecionaAbatedouro()" onmouseenter="exibeHint(this)" onmouseleave ="escondeHint(this)">
+            <i class="fas fa-dollar-sign"></i>
+          </div>
+        </div>
+        <div id="menuPopper7">
+          <div class="icone-circular" id="menu7" onclick="redirecionaAtividadesRealizadaAnimal()" onmouseenter="exibeHint(this)" onmouseleave ="escondeHint(this)">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+        </div>
+        <div id="menuPopper8">
+          <div class="icone-circular" id="menu8" onclick="redirecionaGraficoLucros()" onmouseenter="exibeHint(this)" onmouseleave ="escondeHint(this)">
+              <i class="fas fa-search-dollar"></i>
+          </div>
+        </div>
+        <div id="menuPopper9">
+          <div class="icone-circular" id="menu9" onclick="redirecionaAroba()" onmouseenter="exibeHint(this)" onmouseleave ="escondeHint(this)" >
+            <i class="fas fa-balance-scale"></i>
+          </div>
+        </div>
+        </div>
+      </nav>
+      </nav>
+    </header>
+    <div class="conChart">
+        <h1 class="subTitulo">
+          <span class="headline">Quantidade de animais em um periodo</span>
+        </h1>
+        <div class="conteudo-grafico">
+            <div id="chart1" class="grafico ct-chart ct-perfect-fourth"></div>
+            <div class="container">
+              <div class="row">
+                <div class="col-1">
+                  <div id="linegraf-info"></div>
+                </div>
+                <h5 class="label-info col">Quantidade de animais por mês/ano</h5>
+              </div>
+            </div>
+        </div>
+        <h1 class="subTitulo">
+          <span class="headline">Gráfico do consumo de grãos por rebanho</span>
+        </h1>
+        <div class="conteudo-grafico">
+            <div id="chart2" class="grafico ct-chart ct-perfect-fourth"></div>
+            <div class="container">
+              <div class="row">
+                <div class="col-1">
+                  <div id="linegraf-info"></div>
+                </div>
+                <h5 class="label-info col">Valor em tonelada</h5>
+              </div>
+            </div>
+        </div>
+
+        <h1 class="subTitulo">
+          <span class="headline">Relação de raça de gado na fazenda</span>
+        </h1>
+        <div class="conteudo-grafico">
+            <div id="chart3" class="grafico ct-chart ct-perfect-fourth"></div>
+            <div class="container">
+              <div class="row">
+                <div class="col-1">
+                  <div id="linegraf-info-um"></div>
+                </div>
+                <h5 class="label-info col-3">Devon</h5>
+                <div class="col-1">
+                  <div id="linegraf-info-dois"></div>
+                </div>
+                <h5 class="label-info col-3">Holandes</h5>
+                <div class="col-1">
+                  <div id="linegraf-info-tres"></div>
+                </div>
+                <h5 class="label-info col-3">Paraguaio</h5>
+              </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <script type="text/javascript" src="./resources/js/graficoAnimalFazenda.js"></script>
+  </body>
+</html>
