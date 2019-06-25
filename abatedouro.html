@@ -16,9 +16,11 @@
   <link rel="icon" href="./resources/favicon.ico" type="image/x-icon" />
   <script src="./resources/js/redirecionamento.js"></script>
   <script src="https://unpkg.com/tooltip.js"></script> 
+  <script src="https://unpkg.com/tooltip.js"></script>
   <script src="https://unpkg.com/popper.js"></script>
   <script src="./resources/js/scriptPopper.js"></script>
   
+
 </head>
 
 <body>
@@ -32,6 +34,15 @@
       <div id="popper7" class="pooper"><span>Atividades realizadas</span></div>
       <div id="popper8" class="pooper"><span>Lucros/Custos</span></div>
       <div id="popper9" class="pooper"><span>Time Line</span></div>
+      <div id="popper1" class="pooper esconde arrow_box">Cadastrado do produtos</div>
+      <div id="popper2" class="pooper esconde arrow_box">Cadastro de despezas</div>
+      <div id="popper3" class="pooper esconde arrow_box">Gráfico do estoque</div>
+      <div id="popper4" class="pooper esconde arrow_box">Cadastro de animais</div>
+      <div id="popper5" class="pooper esconde arrow_box">Gráficos dados do animal</div>
+      <div id="popper6" class="pooper esconde arrow_box">Cadastro de abate</div>
+      <div id="popper7" class="pooper esconde arrow_box">Cadastro atividade realizada</div>
+      <div id="popper8" class="pooper esconde arrow_box">Gráfico dos Lucros/Custos</div>
+      <div id="popper9" class="pooper esconde arrow_box">Gráfico do aroba por periodo</div>
     <nav id="navDesktop" class="">
       <div onclick="redirecionaInicio()">
         <div class="logo">
@@ -43,10 +54,15 @@
           <i class="fas fa-cart-plus icone">
 
           </i>
+      <div id="menuPopper1">
+        <div id="menu1" class="icone-circular" onmouseenter="exibeHint(this)" onmouseleave ="escondeHint(this)" onclick="redirecionaCadastroProdutos()">
+          <i class="fas fa-cart-plus icone"></i>
         </div>
       </div>
       <div id="menu2" onclick="redirecionaDespezasAnimal()" >
         <div class="icone-circular">
+      <div id="menuPopper2">
+        <div class="icone-circular" id="menu2" onclick="redirecionaDespezasAnimal()" onmouseenter="exibeHint(this)" onmouseleave ="escondeHint(this)">
           <i class="fas fa-chart-line"></i>
           </i>
         </div>
@@ -54,36 +70,56 @@
       <div id="menu3" onclick="redirecionaGraficoEstoque()" >
         <div class="icone-circular">
           <i class="fas fa-calendar-check"></i>
+      <div id="menuPopper3">
+        <div class="icone-circular" id="menu3" onclick="redirecionaGraficoEstoque()" onmouseenter="exibeHint(this)" onmouseleave ="escondeHint(this)">
+          <i class="fas fa-dolly"></i>
         </div>
       </div>
       <div id="menu4" onclick="redirecionaCadastroAnimal()" >
         <div class="icone-circular">
           <i class="fas fa-hourglass-half"></i>
+      <div id="menuPopper4">
+        <div class="icone-circular" id="menu4" onclick="redirecionaCadastroAnimal()" onmouseenter="exibeHint(this)" onmouseleave ="escondeHint(this)">
+          <i class="fas fa-paw"></i>
         </div>
       </div>
       <div id="menu5" onclick="redirecionaGraficoDadosAnimal()" >
         <div class="icone-circular">
           <i class="fas fa-search-dollar"></i>
+      <div id="menuPopper5">
+        <div class="icone-circular" id="menu5" onclick="redirecionaGraficoDadosAnimal()" onmouseenter="exibeHint(this)" onmouseleave ="escondeHint(this)">
+          <i class="fas fa-chart-pie"></i>
         </div>
       </div>
       <div id="menu6" onclick="redirecionaAbatedouro()" >
         <div class="icone-circular">
+      <div id="menuPopper6">
+        <div class="icone-circular" id="menu6" onclick="redirecionaAbatedouro()" onmouseenter="exibeHint(this)" onmouseleave ="escondeHint(this)">
           <i class="fas fa-dollar-sign"></i>
         </div>
       </div>
       <div id="menu7" onclick="redirecionaAtividadesRealizadaAnimal()" >
         <div class="icone-circular">
 
+      <div id="menuPopper7">
+        <div class="icone-circular" id="menu7" onclick="redirecionaAtividadesRealizadaAnimal()" onmouseenter="exibeHint(this)" onmouseleave ="escondeHint(this)">
+          <i class="fas fa-calendar-check"></i>
         </div>
       </div>
       <div  id="menu8" onclick="redirecionaGraficoLucros()" >
         <div class="icone-circular">
 
+      <div id="menuPopper8">
+        <div class="icone-circular" id="menu8" onclick="redirecionaGraficoLucros()" onmouseenter="exibeHint(this)" onmouseleave ="escondeHint(this)">
+            <i class="fas fa-search-dollar"></i>
         </div>
       </div>
       <div id="menu9" onclick="redirecionaTimeLine()" >
         <div class="icone-circular">
 
+      <div id="menuPopper9">
+        <div class="icone-circular" id="menu9" onclick="redirecionaAroba()" onmouseenter="exibeHint(this)" onmouseleave ="escondeHint(this)" >
+          <i class="fas fa-balance-scale"></i>
         </div>
       </div>
       </div>
