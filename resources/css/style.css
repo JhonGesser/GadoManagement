@@ -91,6 +91,7 @@
     color: white;
     padding-bottom: 20px;
     float: left;
+    position: fixed;
 
   }
 
@@ -225,14 +226,79 @@
 }
 
 .pooper{
-  margin-top: 1px;
-  width: 12%;
-  height: 25px;
+  width: 210px;
+  height: 28px;
   background-color: #26A7FF;
-  border: 1px #000 dotted;
   text-align: right;
   color: #FFF;
-  font-size: 17px;
-  -webkit-text-stroke-width: 0.2px; /* largura da borda */
-  -webkit-text-stroke-color: #000; /* cor da borda */
+  font-size: 15px;
+  z-index: 1;
+  position: absolute;
+  padding-right: 5px;
+
+
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.esconde {
+  display:none;
+}
+
+.transicaoHintBarExibir {
+  animation: acaoHintBarExibir;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+.transicaoHintBarEsconder {
+  animation: acaoHintBarEsconder;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes acaoHintBarEsconder {
+  from {
+    width: 210px;
+    opacity: 1;
+
+
+  }
+  to {
+    width: 0px;
+    opacity: 0;
+
+  }
+}
+
+@keyframes acaoHintBarExibir {
+  from {
+    width: 0px;
+    opacity: 0;
+
+  }
+  to {
+    width: 210px;
+    opacity: 1;
+
+  }
+}
+
+.arrow_box {
+	position: relative;
+	background: #26A7FF;
+}
+.arrow_box:after {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(38, 167, 255, 0);
+	border-right-color: #26A7FF;
+	border-width: 6px;
+	margin-top: -6px;
 }
