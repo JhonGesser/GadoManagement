@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Gráfico animal na fazenda</title>
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
      <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -11,6 +12,7 @@
      <link rel="stylesheet" href="./resources/font/fontawesome/css/all.css">
      <script src="./resources/js/script.js"></script>
      <link rel="icon" href="./resources/favicon.ico" type="image/x-icon" />
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
      <script src="./resources/js/redirecionamento.js"></script>
      <script src="https://unpkg.com/tooltip.js"></script>
      <script src="https://unpkg.com/popper.js"></script>
@@ -83,7 +85,17 @@
       </nav>
       </nav>
     </header>
-    <div class="conChart">
+    <div id="desTitulo" class="container">
+        <div class="row">
+          <div class="col-1">
+            <i class="iconTitulo fas fa-search-dollar"></i>
+          </div>
+          <div class="col-11 titulo">
+            <h1>Gráfico dos Lucros/Custos</h1>
+          </div>
+        </div>
+      </div>
+    <div class="conChart">     
         <h1 class="subTitulo">
           <span class="headline">Ganhos e perdas por semestre</span>
         </h1>
