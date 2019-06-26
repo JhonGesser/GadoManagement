@@ -15,6 +15,9 @@
     <script src="https://unpkg.com/tooltip.js"></script>
     <script src="https://unpkg.com/popper.js"></script>
     <script src="./resources/js/scriptPopper.js"></script>
+    <script type="text/javascript" src="./resources/js/coin-slider.js"></script>
+
+    <link rel="stylesheet" href="./resources/css/coin-slider-styles.css" type="text/css" />
 
   </head>
   <body>
@@ -84,5 +87,26 @@
       </nav>
 
     </header>
+    <div id="slider">
+				<img src="./resources/image/slider1.png" alt="Gado Management" />
+				<span>
+					<b>Gado Management</b><br />
+					Tudo de bom e de melhor para o seu gado!
+				</span>
+			
+				<img src="./resources/image/slider2.jpeg" alt="Gado Management" />
+        <span>
+            <b>Gado Management</b><br />
+            Vai ficar para trás? O melhor da industria está aqui! 
+          </span>
+				<img src="./resources/image/slider3.jpg" alt="Gado Management" />
+        <span>
+            <b>Fale com um de nossos vendedores!</b><br />
+            Um investimento da JPS para o seu futuro!
+          </span>
+		</div>
+		<script>
+			$('#slider').coinslider();
+		</script>
   </body>
 </html>
