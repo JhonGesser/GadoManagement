@@ -1,5 +1,5 @@
 function redirecionaGraficoConsumo(){
-    window.location.href = "./graficoConsumo.html";
+    window.location.href = "./graficoEstoque.html";
 }
 function redirecionaDespezas(){
     window.location.href = "./cadastroDespeza.html";
@@ -13,13 +13,13 @@ function redirecionaDespezasAnimal(){
     window.location.href = "./cadastroDespeza.html";
 }
 function redirecionaGraficoEstoque(){
-    window.location.href = "./graficoConsumo.html";
+    window.location.href = "./graficoEstoque.html";
 }
 function redirecionaCadastroAnimal(){
     window.location.href = "./cadastroBoi.html";
 }
 function redirecionaGraficoDadosAnimal(){
-    window.location.href = "./graficoAnimalFazenda.html";
+    window.location.href = "./graficoDadosAnimal.html";
 }
 function redirecionaAbatedouro(){
     window.location.href = "./abatedouro.html";
@@ -28,7 +28,7 @@ function redirecionaAtividadesRealizadaAnimal(){
     window.location.href = "./cadastroAtividadesRealizadas.html";
 }
 function redirecionaGraficoLucros(){
-    window.location.href = "./graficoGanhos.html";
+    window.location.href = "./graficoLucros.html";
 }
 function redirecionaTimeLine(){
     window.location.href = "./aroba.html";
