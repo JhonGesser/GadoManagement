@@ -36,3 +36,6 @@ function redirecionaTimeLine(){
 function redirecionaInicio(){
     window.location.href = "./index.html";
 }
+function redirecionaAroba(){
+    window.location.href = "./graficoArroba.html"
+}
