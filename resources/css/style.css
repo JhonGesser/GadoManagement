@@ -302,3 +302,9 @@
 	border-width: 6px;
 	margin-top: -6px;
 }
+
+#slider{
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+}
